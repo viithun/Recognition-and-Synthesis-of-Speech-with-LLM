@@ -1,0 +1,5 @@
+Flask
+dotenv
+openai
+azure.cognitiveservices.speech
+pathlib

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>🎙️ Voice ChatGPT</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="app-bar">
+    <h1 class="title"><i data-lucide="message-circle"></i> Voice ChatGPT</h1>
+    <button id="theme-toggle" title="Toggle dark mode"></button>
+  </header>
+
+  <main class="chat">
+    <div id="messages" class="messages"></div>
+
+    <form id="chat-form" autocomplete="off" class="composer">
+      <button id="mic" type="button" class="icon-btn" title="Hold to talk">
+        <i data-lucide="mic"></i>
+      </button>
+
+      <input id="textbox" type="text" placeholder="Type a message…" required />
+
+      <button type="submit" class="send-btn" title="Send">
+        <i data-lucide="send"></i>
+      </button>
+    </form>
+  </main>
+
+  <template id="typing-template">
+    <div class="message bot typing">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </template>
+
+  <script src="/static/js/app.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
